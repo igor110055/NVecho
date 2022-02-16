@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	2202	WTI Crude Oil@NYM	[111111111111]	1	0.05%	18:00	17:00	8	14:30	CLA Comdty	CL	12:00	12:30	20	Vwap	10	07:10	08:10	0.9	1.4	1	0.55	1.7	N	Y	N	CL	NYMEX	09:00	Y	Y	Y	Y	Y		Y	0.55	0.55	1.7	short sr 1.22

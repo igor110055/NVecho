@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	1202	Cotton No. 2@NYB	[001010100001]	1	0.05%	21:00	14:30	8	14:15	CTA Comdty	CT	12:00	14:15	20	Vwap	10	08:10	09:10	0	1.25	-1		1.9	N	N	Y	CT	NYBOT	21:00	Y	Y	Y	Y	Y		Y	1.7	1	1.9	

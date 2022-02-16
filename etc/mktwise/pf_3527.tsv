@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	3527	MSCI Emerging Market@NYL	[001001001001]	1	0.03%	18:00	17:59	8	16:15	MESA Index	MEM	12:00	16:15	20	Vwap	10	09:45	10:45	0	2.5	0						MXEF	NYSELIFFE		Y	Y	N	N	N		N				

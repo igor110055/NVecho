@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	1308	Robusta Coffee@LIF	[101010101010]	1	0.05%	09:00	17:30	8	17:25	DFA Comdty	LRC	12:00	12:30	30	Vwap	20	09:15	10:15	0	1.8	0	1.8	1.2	Y	Y	Y	D	ICEEUSOFT		Y	Y	Y	Y	Y		Y		1.8		Fix BST time

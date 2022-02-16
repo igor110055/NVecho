@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	3524	MSCI Singapore@SGX	[111111111111]	1	0.03%	08:30	17:10	8	17:05	QZA Index	SSG	12:00	17:05	20	Vwap	10	08:50	09:50	1.75	0	1	0.75	0.65	N	Y	N	SSG	SGX		Y	Y	N	N	N		N	0.55	0.55	0.65	strange volume pattern

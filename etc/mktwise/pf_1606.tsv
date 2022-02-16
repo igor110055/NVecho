@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	1606	Soybean Oil@CBT	[101010101001]	1	0.05%	19:00	13:20	8	13:15	BOA Comdty	BO	12:00	12:00	30	Vwap	20	08:30	09:30	1.6	0	0	1.6	1.25	Y	Y	Y	ZL	ECBOT		Y	Y	Y	Y	Y		Y	1.6	1.6	1.25	ls sr 1.32; long sr 1.55; short sr 1.4

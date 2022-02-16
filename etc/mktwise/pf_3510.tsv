@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	3510	Hang Seng China Enterprises@HKG	[111111111111]	1	0.03%	09:15	16:30	8	16:15	HCA Index	HCEI	13:30	16:30	20	Vwap	10	09:25	10:25	0	1.5	0	1.2	1.1	Y	Y	Y	HHI.HK	HKFE		Y	Y	Y	Y	N		N	1.15	1.2	1.1	

@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	3528	ASX SPI 200@SFE	[001001001001]	1	0.03%	09:50	16:30	8	16:30	XPA Index	YAP	12:00	16:30	20	Vwap	10	10:10	11:10	1.2	0	1	0.85		N	Y	N	SPI	SNFE		Y	Y	N	N	N		N	1.1	0.65		

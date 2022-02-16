@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	3209	CAD/USD@CME	[001001001001]	1	0.01%	17:00	16:00	8	14:00	CDA Curncy	CD	12:30	12:30	20	Vwap	10	07:10	08:10	1.15	1.45	-1		0.85	N	N	Y	CAD	GLOBEX		Y	Y	Y	Y	Y		Y	0.9		0.9	short sr 3.5

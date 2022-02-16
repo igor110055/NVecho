@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	3515	Hang Seng@HKG	[111111111111]	1	0.03%	09:15	16:30	8	16:15	HIA Index	HSI	16:15	16:15	20	Vwap	10	09:20	10:20	1.4	0	0	0.55	0.7	Y	Y	Y	HSI	HKFE		Y	Y	Y	Y	N		N	0.55	0.55	0.7	short sr 2.84

@@ -1,0 +1,3 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	1703	Hard Red Wheat@CBT	[001010101001]	1	0.05%	19:00	13:20	8	13:15	KWA Comdty	KW	13:15	13:15	30	Vwap	20	08:30	09:30	1.45	0	0				N	N	KE	ECBOT		Y	Y	Y	Y	Y		Y	1.5	1.5	1.6	short sr 1.34
+Y	1706	Milling Wheat@EOP	[101010000010]	1	0.14%	10:45	19:30	8	18:30	CAA Comdty	BL2	18:30	18:30	30	Twap	20	11:05	12:05	2.5	2.5	1	1.95		N	Y	N	EBM	MATIF		Y	Y	N	Y	N		N		1.95		before 2015/09 [101010000010]

@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	1401	Live Cattle@CME	[010101010101]	1	0.05%	08:30	13:05	8	13:00	LCA Comdty	LC	12:00	12:30	40	Vwap	30	09:40	10:40	1.8	1.55	0	1.35	1.65	Y	Y	Y	LE	GLOBEX	08:30	Y	Y	Y	Y	Y		N	1.65	1.8	1.65	

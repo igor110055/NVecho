@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	3205	JPY/USD@CME	[001001001001]	1	0.01%	17:00	16:00	8	14:00	JYA Curncy	JY	12:00	14:00	20	Vwap	10	07:10	08:10	1.1	0.5	0	1.1	1.2	Y	Y	Y	JPY	GLOBEX		Y	Y	Y	Y	Y		Y	1.1	1.1	1.2	long sr 1.8; short sr 2.3; 

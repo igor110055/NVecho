@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	4303	Gold @CMX	[010101010001]	1	0.05%	18:00	17:00	8	13:30	GCA Comdty	GC	12:30	13:30	20	Vwap	10	07:15	08:15	0.85	0	0	0.85	0.8	Y	Y	Y	GC	NYMEX	08:20	Y	Y	Y	Y	Y		Y	0.8	0.85	0.8	ls sharpe 2.76; long sr 1.6; short sr 2.57

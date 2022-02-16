@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	3104	Euro Bobl@EUX	[001001001001]	1	0.01%	08:00	22:05	8	17:15	OEA Comdty	FGBM	12:00	17:15	20	Vwap	10	08:20	09:20	1.55	1.6	0	1.5	1.2	Y	Y	Y	GBM	DTB		Y	Y	Y	Y	Y		N	1.15	1.5	1.15	

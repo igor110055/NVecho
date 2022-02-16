@@ -1,0 +1,19 @@
+project Vecho/sim
+    : requirements
+        <target-os>solaris:<xdll-path>/usr/lib/sparcv9
+        <target-os>solaris:<xdll-path>/usr/local/lib/sparcv9
+        <include>./src
+        <library>/boost//date_time
+        <library>/boost//program_options
+        <library>/pirate//pirate-utils
+        <library>/pirate//pirate-tr
+        <library>/pirate-tools//pirate-inds
+        <source>/pirate//headers        
+        <source>/Vecho/strat//Vecho-strat
+    : usage-requirements
+        <include>./src
+;
+
+exe Vecho-sim : [ glob-tree *.cpp : test ] 
+    : <define>PIRATE_DYN_LINK 
+;

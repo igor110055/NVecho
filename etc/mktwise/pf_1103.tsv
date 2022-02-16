@@ -1,0 +1,2 @@
+Trade	MktID	MarketName	TradableMnth	Weight	Slpg	Open	Close	CtCnt	Settle	BB	RIC	Tm1	Tm2	EnEndAdj	ExOT	ExPeriod	RebBegin	RebEnd	longMult	shortMult	TradeDir	longMult	shortMult	longShort	long	short	IBRoot	IBExch	OpenReg	URic	UIB	UR2NIntra	URNEX2d	UEm	Note	ProdWithAsian	longShort	longOnly	shortOnly	Note
+Y	1103	Maize@EOP	[101001010010]	1	0.16%	10:45	18:30	8	18:30	EPA Comdty	EMA	12:00	18:30	20	Vwap	10	11:05	12:05	1.8	0	0						EMA	MATIF		Y	Y	N	Y	N		N				
