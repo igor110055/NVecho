@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-PROJECT = 'Vecho'
+PROJECT = 'NVecho'
 VERSION = '$VERSION:1.0:VERSION$'
 CODE_MODULES = ['sim', 'strat']
 

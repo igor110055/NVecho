@@ -10,10 +10,10 @@ if "%1"=="" (
 REM vola target: 10% ==> riskFactor: 0.005759
 
 for %%A in (46) do (
-%~dp0\sim\bin\msvc-14.0\release\Vecho-sim.exe ^
+%~dp0\sim\bin\msvc-14.0\release\NVecho-sim.exe ^
 -c etc\sim-BBAT.cfg ^
--a Vecho_loopOnTrigAtrPeriod_belowTopAndAboveBottom ^
--p ..\univ\live\pf-mlp-Vecho-opt-prod.tsv ^
+-a NVecho_loopOnTrigAtrPeriod_belowTopAndAboveBottom ^
+-p ..\univ\live\pf-mlp-NVecho-opt-prod.tsv ^
 --px-precision 0.0000001 ^
 --strat.farPeriod 40 ^
 --strat.riskFactor 0.005759 ^

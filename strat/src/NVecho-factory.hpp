@@ -1,7 +1,7 @@
 #ifndef RNINTRA__FACTORY_HPP
 #define RNINTRA__FACTORY_HPP
 #include <pirate/tr/bar/BarStratFactory.hpp>
-#include "Vecho-strat.hpp"
+#include "NVecho-strat.hpp"
 #include <cstddef>
 
 

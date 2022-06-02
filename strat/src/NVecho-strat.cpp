@@ -1,4 +1,4 @@
-#include "Vecho-strat.hpp"
+#include "NVecho-strat.hpp"
 
 #include <cmath>
 #include <cstdlib>
@@ -30,7 +30,7 @@ Strat::Strat(
     const pirate::ind::period_type aShortAaaPeriod, 
     const pirate::ind::period_type aRicciPeriod,
     const pirate::ind::period_type aAllocAtrPeriod,
-    const pirate::ind::period_type aTrigAtrPeriod,
+    //const pirate::ind::period_type aTrigAtrPeriod,
     const pirate::ind::period_type aRefAtrPeriod,
     const pirate::ind::period_type aRSIPeriod,
     const pirate::ind::period_type aPctPeriod, 
@@ -74,7 +74,7 @@ Strat::Strat(
       rsiCalc(EMACalc::Period(static_cast<unsigned int>(aRSIPeriod)), 0),
 
       allocAtrCalc(aAllocAtrPeriod), 
-      trigAtrCalc(aTrigAtrPeriod), 
+      //trigAtrCalc(aTrigAtrPeriod), 
       refAtrCalc(aRefAtrPeriod), 
 
       ind1LBCalc(aPctPeriod, aInd1LBPct),
@@ -102,7 +102,7 @@ Strat::Strat(
 
       rsi(doubleNA),
       allocAtr(doubleNA),
-      trigAtr(doubleNA),
+      //trigAtr(doubleNA),
 
       ind1LBPct(aInd1LBPct),
       ind1UBPct(aInd1UBPct),
@@ -148,7 +148,7 @@ Strat::Strat(
     hhHist.swap(*(new DoubleBuff(3)));
     llHist.swap(*(new DoubleBuff(3)));
     allocAtrHist.swap(*(new DoubleBuff(3)));
-    trigAtrHist.swap(*(new DoubleBuff(3)));
+    rgHist.swap(*(new DoubleBuff(3)));
     refAtrHist.swap(*(new DoubleBuff(3)));
 }
 
@@ -189,20 +189,24 @@ Strat::Strat(
     //*/
 
     // longMult
+    /*/
     const std::string& longMultString = *mktDefIter;
     if (!std::all_of(longMultString.begin(), longMultString.end(), isspace)) {
         double lm = strtod(longMultString.c_str(), &endptr);
         if (*endptr == '\0' && errno == 0) longMult = lm;
     }
     mktDefIter++;
-
+    //*/
+    
     // shortMult
+    /*/
     const std::string& shortMultString = *mktDefIter;
     if (!std::all_of(shortMultString.begin(), shortMultString.end(), isspace)) {
         double sm = strtod(shortMultString.c_str(), &endptr);
         if (*endptr == '\0' && errno == 0) shortMult = sm;
     }    
-   
+    //*/
+
     if (debugLevel > 0)
     {
         logHeader() 
@@ -229,7 +233,7 @@ Strat::Strat(
             << sep << "rsi"
 
             << sep << "allocAtr"
-            << sep << "trigAtr"
+            << sep << "rg"
             << sep << "refAtr"
             
             << sep << "weight"
@@ -365,10 +369,10 @@ Strat::doCalc(const boost::posix_time::ptime dt_tm,
     
     rsi = rsiCalc.calcSkipNA(closePx);
     allocAtr = allocAtrCalc.calc(openPx, highPx, lowPx, closePx);
-    trigAtr = trigAtrCalc.calc(openPx, highPx, lowPx, closePx);
+    //trigAtr = trigAtrCalc.calc(openPx, highPx, lowPx, closePx);
     refAtr = refAtrCalc.calc(openPx, highPx, lowPx, closePx);
     allocAtrHist.push_front(allocAtr);
-    trigAtrHist.push_front(trigAtr);
+    rgHist.push_front(highPx - lowPx);
     refAtrHist.push_front(refAtr);
     longAaaAtr = longAaaAtrCalc.calc(openPx, highPx, lowPx, closePx);
     if (!na(longAaaAtr) && longAaaAtr != 0)
@@ -465,7 +469,7 @@ Strat::doCalc(const boost::posix_time::ptime dt_tm,
 
             << sep << rsi
             << sep << allocAtr
-            << sep << trigAtr
+            << sep << highPx - lowPx
             << sep << refAtr
             << sep << weight()
             << sep << equity()
@@ -526,7 +530,7 @@ Strat::trade()
     } 
 
     if (shortCond) {
-        sell("LE_VB", nc, otLMT(roundToTic(static_cast<float>(close + shortMult*trigAtrHist[1]))));
+        sell("LE_VB", nc, otLMT(roundToTic(static_cast<float>(close + beta*rgHist[1]))));
     }
 
     if (isShort())
@@ -541,14 +545,14 @@ Strat::trade()
     } 
 
     if (longCond) { 
-        buy("LE_VB", nc, otLMT(roundToTic(static_cast<float>(close - longMult*trigAtrHist[1]))));
+        buy("LE_VB", nc, otLMT(roundToTic(static_cast<float>(close - alpha*rgHist[1]))));
     }
 }
 
 
 bool Strat::testEnterLongFilter()
 {
-    float buyLevel = roundToTic(static_cast<float>(close - longMult*trigAtrHist[1]));
+    float buyLevel = roundToTic(static_cast<float>(close - alpha*rgHist[1]));
     bool ind1Cond =  
          (ind1LBPct <= 0 || ind1Value >= ind1LBValue);
     bool tradeDirCond = longMult > 0;
@@ -558,26 +562,26 @@ bool Strat::testEnterLongFilter()
     std::cout << "testEnterLongFilter: "  
               << to_iso_string(dtm) << ": ind1Cond = " << ind1Cond
               << ", remoteBuy = " << remoteBuy 
-              << ": longMult = " << longMult << ", trigAtrHist[1] = " << trigAtrHist[1] 
+              << ": longMult = " << longMult << ", rgHist[1] = " << rgHist[1] 
               << ", alpha = " << alpha << ", refAtrHist[1] = " << refAtrHist[1] 
               << std::endl; 
     */
     
-    bool remoteBuy = longMult*trigAtrHist[1] >= alpha*refAtrHist[1];
-    bool retValue = tradeDirCond && ind1Cond && remoteBuy && aboveBottom;
+    bool remoteBuy = alpha*rgHist[1] >= alpha*refAtrHist[1];
+    bool retValue = ind1Cond; //tradeDirCond && ind1Cond && remoteBuy && aboveBottom;
     return retValue;    
 }
 
 bool Strat::testEnterShortFilter()
 {
-    float sellLevel = roundToTic(static_cast<float>(close + shortMult*trigAtrHist[1]));
+    float sellLevel = roundToTic(static_cast<float>(close + beta*rgHist[1]));
     bool ind2Cond =  
          (ind2LBPct <= 0 || ind2Value >= ind2LBValue);
     bool tradeDirCond = shortMult > 0;
-    bool remoteSell = shortMult*trigAtrHist[1] >= beta*refAtrHist[1];
+    bool remoteSell = beta*rgHist[1] >= beta*refAtrHist[1];
     bool belowTop = sellLevel <= hiFar.px;
     
-    bool retValue = tradeDirCond && ind2Cond && remoteSell && belowTop;
+    bool retValue = ind2Cond; //tradeDirCond && ind2Cond && remoteSell && belowTop;
     return retValue;
 }
 
@@ -629,7 +633,7 @@ void Strat::rollCleanUp() {
     
     rsiCalc.cleanup();
     allocAtrCalc.cleanup();
-    trigAtrCalc.cleanup();
+    //trigAtrCalc.cleanup();
 
     //ind1LBCalc.cleanup();
     //ind1UBCalc.cleanup();
@@ -643,7 +647,7 @@ void Strat::rollCleanUp() {
     hhHist.clear();
     llHist.clear();
     allocAtrHist.clear();
-    trigAtrHist.clear();
+    //trigAtrHist.clear();
     refAtrHist.clear();
 }
 

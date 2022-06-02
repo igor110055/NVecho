@@ -2,7 +2,7 @@ from __future__ import with_statement
 from pirate.build import *
 import os
 import re
-APPNAME = 'Vecho'
+APPNAME = 'NVecho'
 VERSION = '0.1'
 
 pirate_home = os.environ['PIRATE_HOME']
@@ -64,28 +64,28 @@ defaults_test = BuildObj('', defaults)
 defaults_test.subsys = SubSys.Console
 defaults_test.uselibs = 'boost boost-unittest'
 
-with CppSharedLib('strat/Vecho-strat', defaults) as obj:
+with CppSharedLib('strat/NVecho-strat', defaults) as obj:
     obj.defines += ' PIRATE_DYN_LINK'
     obj.uselibs = 'pirate  pirate-tools  boost'
     obj.source_dirs = 'src'
     obj.sources = '''
-        src/Vecho-factory.cpp
-        src/Vecho-strat.cpp
-        src/Vecho-version.cpp
+        src/NVecho-factory.cpp
+        src/NVecho-strat.cpp
+        src/NVecho-version.cpp
 '''
 
-with CppProgram('strat/Vecho-strattest', defaults_test) as obj:
+with CppProgram('strat/NVecho-strattest', defaults_test) as obj:
     obj.source_dirs = 'test'
     obj.sources = '''
         test/stratest.cpp
-        test/Vecho-test.cpp
+        test/NVecho-test.cpp
 '''
 
-with CppProgram('sim/Vecho-sim', defaults) as obj:
+with CppProgram('sim/NVecho-sim', defaults) as obj:
     obj.subsys = SubSys.Console
     obj.uselibs = 'pirate  pirate-tools  boost'
-    obj.uselibs_local = 'strat/Vecho-strat'
+    obj.uselibs_local = 'strat/NVecho-strat'
     obj.source_dirs = 'src'
     obj.sources = '''
-        src/Vecho-sim.cpp
+        src/NVecho-sim.cpp
 '''

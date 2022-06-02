@@ -1,4 +1,4 @@
-project Vecho/strat
+project NVecho/strat
     : requirements
         <include>./src
         <library>/pirate//pirate-utils
@@ -11,12 +11,12 @@ project Vecho/strat
         <include>./src
 ;
 
-lib Vecho-strat 
+lib NVecho-strat 
     : [ glob-tree *.cpp : test ] 
     : <define>PIRATE_DYN_LINK 
       <link>static
 ;
-exe Vecho-strattest 
+exe NVecho-strattest 
     : [ glob-tree *.cpp : src ]
     : <include>./test 
       <define>BOOST_TEST_DYN_LINK

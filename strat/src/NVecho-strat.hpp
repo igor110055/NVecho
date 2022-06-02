@@ -47,7 +47,7 @@ struct Strat : pirate::tr::bar::BarStrat {
           const pirate::ind::period_type aRicciPeriod,
           const pirate::ind::period_type aRSIPeriod,
           const pirate::ind::period_type aAllocAtrPeriod,    
-          const pirate::ind::period_type aTrigAtrPeriod,    
+          //const pirate::ind::period_type aTrigAtrPeriod,    
           const pirate::ind::period_type aRefAtrPeriod,    
           const pirate::ind::period_type aPctPeriod, 
           
@@ -153,7 +153,7 @@ private:
 
     pirate::ind::RSICalc rsiCalc;
     pirate::ind::ATRCalc allocAtrCalc;
-    pirate::ind::ATRCalc trigAtrCalc;
+    //pirate::ind::ATRCalc trigAtrCalc;
     pirate::ind::ATRCalc refAtrCalc;
 
     pirate::ind::SMACalc volumeMACalc;
@@ -186,7 +186,8 @@ private:
     double ricca;
     double rsi;
     double allocAtr;
-    double trigAtr;
+    double rg;
+    //double trigAtr;
     double refAtr;
     double prevVolumeMA;
     double volumeMA;
@@ -212,7 +213,7 @@ private:
     DoubleBuff hhHist;
     DoubleBuff llHist;
     DoubleBuff allocAtrHist;
-    DoubleBuff trigAtrHist;
+    DoubleBuff rgHist;
     DoubleBuff refAtrHist;
 
     float minTickSz;

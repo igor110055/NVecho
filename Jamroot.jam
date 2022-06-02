@@ -36,11 +36,11 @@ project
         <tag>@pirate-tag
 ;
 
-use-project /Vecho/strat : strat ;
-use-project /Vecho/sim : sim ;
+use-project /NVecho/strat : strat ;
+use-project /NVecho/sim : sim ;
 
 alias all :
-      /Vecho/strat
-      /Vecho/sim
+      /NVecho/strat
+      /NVecho/sim
 ;
 

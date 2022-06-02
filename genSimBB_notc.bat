@@ -9,10 +9,10 @@ if "%1"=="" (
 
 REM vola target: 10% ==> riskFactor: 0.005759
 
-%~dp0\sim\bin\msvc-14.0\release\Vecho-sim.exe ^
+%~dp0\sim\bin\msvc-14.0\release\NVecho-sim.exe ^
 -c etc\prod-BBAT.cfg ^
--a Vecho ^
--p ..\univ\notc\pf-mlp-Vecho-opt-notc.tsv ^
+-a NVecho ^
+-p ..\univ\notc\pf-mlp-NVecho-opt-notc.tsv ^
 -r C:\home\joshxli\prod\mlp\report\bb-notc ^
 --px-precision 0.0000001 ^
 --strat.farPeriod 40 ^

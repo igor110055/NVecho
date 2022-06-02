@@ -6,20 +6,22 @@ if "%1"=="" (
 ) else (  
   set equity= -e c%1
 )
-
+x
 REM vola target: 10% ==> riskFactor: 0.00349
 
-for %%A in (0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2) do (
-for %%B in (0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 1.1 1.2) do (
-C:\home\joshxli\prod\strat\Vecho\sim\bin\msvc-14.0\release\Vecho-sim.exe ^
+for %%A in (0.8 0.9 1 1.1 1.2 1.3) do (
+for %%B in (0.8 0.9 1 1.1 1.2 1.3) do (
+for %%C in (91 93 95 97 99) do (
+for %%D in (91 93 95 97 99) do (
+C:\home\joshxli\prod\strat\NVecho\sim\bin\msvc-14.0\release\NVecho-sim.exe ^
 -c etc\prod-BBAT.cfg ^
--a Vecho_loop_alpha_beta ^
--p ..\univ\live\pf-mlp-Vecho-opt-prod.tsv ^
+-a NVecho_super_loop_alpha_beta ^
+-p etc\pf-mlp-super-sim.tsv ^
 --px-precision 0.0000001 ^
---strat.riskFactor=0.00349 ^
+--strat.riskFactor=0.0025 ^
 --strat.pctPeriod 250 ^
---strat.ind1LBPct 90 ^
---strat.ind2LBPct 90 ^
+--strat.ind1LBPct %%C ^
+--strat.ind2LBPct %%D ^
 --strat.allocAtrPeriod 250 ^
 --strat.trigAtrPeriod 60 ^
 --strat.tickMult 1.5  ^
@@ -28,4 +30,4 @@ C:\home\joshxli\prod\strat\Vecho\sim\bin\msvc-14.0\release\Vecho-sim.exe ^
 --strat.refAtrPeriod 250 ^
 --debug 0 ^
 %equity%
-))
+))))

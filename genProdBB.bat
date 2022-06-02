@@ -7,10 +7,10 @@ if "%1"=="" (
   set equity= -e c%1
 )
 
-C:\home\joshxli\prod\strat\Vecho\sim\bin\msvc-14.0\release\Vecho-sim.exe ^
+C:\home\joshxli\prod\strat\NVecho\sim\bin\msvc-14.0\release\NVecho-sim.exe ^
 -c etc\prod-BBAT.cfg ^
--a Vecho ^
--p ..\univ\live\pf-mlp-Vecho-opt-prod.tsv ^
+-a NVecho ^
+-p ..\univ\live\pf-mlp-NVecho-opt-prod.tsv ^
 --px-precision 0.0000001 ^
 --strat.riskFactor=0.005 ^
 --strat.pctPeriod 250 ^

@@ -27,7 +27,7 @@ shift
 goto initial
 :done
 
-C:\home\joshxli\prod\strat\Vecho\sim\bin\msvc-14.0\release\Vecho-sim.exe ^
+C:\home\joshxli\prod\strat\NVecho\sim\bin\msvc-14.0\release\NVecho-sim.exe ^
 -c etc\prod-BBAT.cfg ^
 -a %a% ^
 -p %p% ^

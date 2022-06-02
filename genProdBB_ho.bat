@@ -9,10 +9,10 @@ REM )
 
 REM vola target: 10% ==> riskFactor: 0.005759
 
-%~dp0\sim\bin\msvc-14.0\release\Vecho-sim.exe ^
+%~dp0\sim\bin\msvc-14.0\release\NVecho-sim.exe ^
 -c etc\prod-BBAT.cfg ^
--a Vecho ^
--p ..\univ\live\pf-mlp-Vecho-opt-prod.tsv ^
+-a NVecho ^
+-p ..\univ\live\pf-mlp-NVecho-opt-prod.tsv ^
 --trade-range=20150101,%1 ^
 --px-precision 0.0000001 ^
 --strat.farPeriod 40 ^

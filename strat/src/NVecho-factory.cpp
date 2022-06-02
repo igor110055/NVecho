@@ -1,8 +1,8 @@
-#include "Vecho-factory.hpp"
+#include "NVecho-factory.hpp"
 using pirate::ind::period_type;
 
-#include "Vecho-strat.hpp"
-#include "Vecho-version.hpp"
+#include "NVecho-strat.hpp"
+#include "NVecho-version.hpp"
 #include <pirate/ver/Versions.hpp>
 #include <pirate/tr/Trader.hpp>
 #include <pirate/ind/PirateToolsVersion.hpp>
@@ -236,7 +236,7 @@ Factory::Factory()
                      m_shortAaaPeriod,
                      m_ricciPeriod,
                      m_allocAtrPeriod,
-                     m_trigAtrPeriod,
+                     //m_trigAtrPeriod,
                      m_refAtrPeriod,
                      m_rsiPeriod,
                      m_pctPeriod,
